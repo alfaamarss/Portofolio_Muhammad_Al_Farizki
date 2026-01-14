@@ -30,11 +30,10 @@
 
         <!-- BUTTON -->
         <div class="mt-4 d-flex gap-3 flex-wrap">
-          <a href="https://github.com/username" target="_blank" class="btn btn-dark px-4"> GitHub </a>
+          <a href="https://github.com/alfaamarss" target="_blank" class="btn btn-dark px-4"> GitHub </a>
 
-          <a href="https://linkedin.com/in/username" target="_blank" class="btn btn-outline-primary px-4"> LinkedIn </a>
-
-          <a href="/cv.pdf" class="btn btn-outline-secondary px-4"> Download CV </a>
+          <a href="https://www.linkedin.com/in/muhammad-al-farizki/" target="_blank" class="btn btn-outline-primary px-4"> LinkedIn </a>
+          <a href="/Cv_Muhammad Al Farizki.pdf" download class="btn btn-outline-secondary px-4"> Download CV </a>
         </div>
 
         <!-- DIVIDER -->
@@ -95,8 +94,9 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* ===== DESKTOP (DEFAULT) ===== */
 .profile-card {
-  transform: translateY(-110px); /* atur -20 / -30 / -40 sesuai selera */
+  transform: translateY(-40px);
   transition: transform 0.3s ease;
 }
 
@@ -121,6 +121,51 @@ onMounted(() => {
 
 .github-card img {
   max-width: 100%;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  /* reset animasi */
+  .profile-card {
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .profile-card:hover {
+    transform: none;
+  }
+
+  /* foto lebih kecil */
+  .profile-img {
+    max-width: 140px;
+  }
+
+  /* text center biar rapi */
+  #about h2,
+  #about p {
+    text-align: center;
+  }
+
+  /* typing text biar ga kepanjangan */
+  .typing-text {
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* button full & center */
+  #about .btn {
+    width: 100%;
+  }
+
+  #about .mt-4 {
+    justify-content: center;
+  }
+
+  /* github chart jangan kepotong */
+  .github-card {
+    overflow-x: auto;
+  }
 }
 
 @keyframes blink {
