@@ -18,9 +18,9 @@
             <hr class="my-3" />
 
             <p class="mb-1">
-              <strong>Semester:</strong> 5 <br />
+              <strong>Semester:</strong> 6 <br />
               <strong>GPA:</strong> 3.33 <br />
-              <strong>Credits Earned:</strong> 59
+              <strong>Credits Earned:</strong> 101
             </p>
           </div>
 

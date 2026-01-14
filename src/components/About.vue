@@ -1,5 +1,5 @@
 <template>
-  <section class="container py-5 mt-5" id="about">
+  <section class="container py-5 mt-5 section" id="about">
     <div class="row align-items-center g-5">
       <!-- FOTO -->
       <div class="col-md-4 d-flex justify-content-center">
@@ -33,7 +33,7 @@
           <a href="https://github.com/alfaamarss" target="_blank" class="btn btn-dark px-4"> GitHub </a>
 
           <a href="https://www.linkedin.com/in/muhammad-al-farizki/" target="_blank" class="btn btn-outline-primary px-4"> LinkedIn </a>
-          <a href="/Cv_Muhammad Al Farizki.pdf" download class="btn btn-outline-secondary px-4"> Download CV </a>
+          <button class="btn btn-outline-secondary px-4" @click="confirmDownload">Download CV</button>
         </div>
 
         <!-- DIVIDER -->
@@ -54,6 +54,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+import Swal from "sweetalert2";
 
 const texts = ["Muhammad Al Farizki", "Full-Stack Developer"];
 const displayText = ref("");
@@ -91,6 +92,33 @@ function typeEffect() {
 onMounted(() => {
   typeEffect();
 });
+
+function confirmDownload() {
+  Swal.fire({
+    title: "Download CV?",
+    text: "Apakah Anda ingin mengunduh CV Muhammad Al Farizki?",
+    icon: "question",
+    showCancelButton: true,
+    confirmButtonText: "Ya, Download",
+    cancelButtonText: "Batal",
+    reverseButtons: true,
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const link = document.createElement("a");
+      link.href = "/Cv_Muhammad_Al_Farizki.pdf";
+      link.download = "Cv_Muhammad_Al_Farizki.pdf";
+      link.click();
+
+      Swal.fire({
+        icon: "success",
+        title: "Berhasil",
+        text: "CV sedang diunduh",
+        timer: 2000,
+        showConfirmButton: false,
+      });
+    }
+  });
+}
 </script>
 
 <style scoped>
