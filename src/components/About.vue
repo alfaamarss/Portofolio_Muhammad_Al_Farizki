@@ -4,7 +4,7 @@
       <!-- FOTO -->
       <div class="col-md-4 d-flex justify-content-center">
         <div class="card border-0 shadow-sm text-center p-4 rounded-4 profile-card">
-          <img src="@/assets/img/profile.png" alt="Muhammad Al Farizki" class="img-fluid mx-auto mb-3 profile-img" draggable="false" />
+          <img src="@/assets/img/Profile.png" alt="Muhammad Al Farizki" class="img-fluid mx-auto mb-3 profile-img" draggable="false" />
           <h5 class="fw-bold mb-1">Muhammad Al Farizki</h5>
           <small class="text-muted">Full-Stack Web Developer</small>
         </div>
