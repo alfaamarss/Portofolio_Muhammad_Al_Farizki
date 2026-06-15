@@ -9,13 +9,16 @@
         <!-- Kolom Profil (Kiri) -->
         <div class="col-lg-4 d-flex flex-column align-items-center text-center animate-fade-up">
           <div class="profile-img-wrapper mb-4 shadow-sm">
-            <img src="@/assets/img/Profile.png" alt="Muhammad Al Farizki" class="img-fluid rounded-circle profile-img" draggable="false" />
+            <img src="@/assets/img/Profile.png" alt="Muhammad Al Farizki" class="img-fluid rounded-circle profile-img"
+              draggable="false" />
           </div>
           <h5 class="fw-bold mb-1 text-dark">Muhammad Al Farizki</h5>
           <small class="text-muted mb-3 d-block fw-medium">Full-Stack Web Developer</small>
 
-          <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill border border-success-subtle fw-medium d-inline-flex align-items-center gap-2 shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <span
+            class="badge bg-success-subtle text-success px-3 py-2 rounded-pill border border-success-subtle fw-medium d-inline-flex align-items-center gap-2 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
             BNSP Certified
@@ -24,7 +27,8 @@
 
         <!-- Kolom Konten Utama (Kanan) -->
         <div class="col-lg-8 px-md-4">
-          <div class="opp-badge d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4 border shadow-sm animate-fade-up delay-1">
+          <div
+            class="opp-badge d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4 border shadow-sm animate-fade-up delay-1">
             <span class="status-dot"></span>
             Open to opportunities
           </div>
@@ -36,19 +40,26 @@
           </h1>
 
           <p class="fs-6 text-secondary mb-4 hero-desc lh-lg pe-lg-5 animate-fade-up delay-3">
-            I'm <strong class="text-dark">Muhammad Al Farizki</strong>, an Informatics student and BNSP-certified full-stack developer. I bridge robust backend logic with dynamic user interfaces to build secure, production-grade
+            I'm <strong class="text-dark">Muhammad Al Farizki</strong>, an Informatics student and BNSP-certified
+            full-stack developer. I bridge robust backend logic with dynamic user interfaces to build secure,
+            production-grade
             applications that perform at scale.
           </p>
           <div class="mt-4 d-flex gap-3 flex-wrap mb-5 animate-fade-up delay-4">
-            <button @click="scrollToProjects" class="btn btn-primary px-4 py-2 rounded-3 fw-medium shadow-sm d-flex align-items-center gap-2 btn-hover-lift">
+            <a href="#projects"
+              class="btn btn-primary px-4 py-2 rounded-3 fw-medium shadow-sm d-flex align-items-center gap-2 btn-hover-lift text-decoration-none w-auto d-inline-flex">
               View Projects
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
-            </button>
-            <button class="btn btn-outline-secondary px-4 py-2 rounded-3 fw-medium d-flex align-items-center gap-2 border-2 btn-hover-lift" @click="confirmDownload">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            </a>
+            <button
+              class="btn btn-outline-secondary px-4 py-2 rounded-3 fw-medium d-flex align-items-center gap-2 border-2 btn-hover-lift"
+              @click="confirmDownload">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
@@ -61,21 +72,25 @@
           <div class="d-flex flex-wrap align-items-center gap-4 social-footer mt-2 animate-fade-up delay-5">
             <div class="d-flex gap-3">
               <a href="https://github.com/alfaamarss" target="_blank" class="social-icon" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                  ></path>
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/muhammad-al-farizki/" target="_blank" class="social-icon" aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <a href="https://www.linkedin.com/in/muhammad-al-farizki/" target="_blank" class="social-icon"
+                aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
               <a href="mailto:muhammadalfa10@gmail.com" class="social-icon" aria-label="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
@@ -149,6 +164,7 @@ function confirmDownload() {
   opacity: 0.4;
   border-radius: 50%;
 }
+
 .shape-1 {
   width: 400px;
   height: 400px;
@@ -156,6 +172,7 @@ function confirmDownload() {
   top: -10%;
   right: -5%;
 }
+
 .shape-2 {
   width: 300px;
   height: 300px;
@@ -213,9 +230,11 @@ function confirmDownload() {
   0% {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
   }
@@ -239,6 +258,7 @@ function confirmDownload() {
 .bg-success-subtle {
   background-color: #ecfdf5 !important;
 }
+
 .text-success {
   color: #10b981 !important;
 }
@@ -309,15 +329,19 @@ function confirmDownload() {
 .delay-1 {
   animation-delay: 0.1s;
 }
+
 .delay-2 {
   animation-delay: 0.2s;
 }
+
 .delay-3 {
   animation-delay: 0.3s;
 }
+
 .delay-4 {
   animation-delay: 0.4s;
 }
+
 .delay-5 {
   animation-delay: 0.5s;
 }
@@ -335,22 +359,27 @@ function confirmDownload() {
     font-size: 2.75rem;
     text-align: center;
   }
+
   .hero-desc {
     text-align: center;
   }
+
   .opp-badge {
     margin: 0 auto 1.5rem auto;
     display: flex !important;
     width: fit-content;
   }
+
   .mt-4.d-flex.gap-3.flex-wrap {
     justify-content: center;
   }
+
   .social-footer {
     justify-content: center;
     flex-direction: column;
     gap: 1rem !important;
   }
+
   .profile-img {
     width: 200px;
     height: 200px;
