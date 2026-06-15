@@ -40,13 +40,13 @@
             applications that perform at scale.
           </p>
           <div class="mt-4 d-flex gap-3 flex-wrap mb-5 animate-fade-up delay-4">
-           <a href="#projects" class="btn btn-primary px-4 py-2 rounded-3 fw-medium shadow-sm d-flex align-items-center gap-2 btn-hover-lift text-decoration-none w-auto d-inline-flex">
-  View Projects
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="5" y1="12" x2="19" y2="12"></line>
-    <polyline points="12 5 19 12 12 19"></polyline>
-  </svg>
-</a>
+            <button @click="scrollToProjects" class="btn btn-primary px-4 py-2 rounded-3 fw-medium shadow-sm d-flex align-items-center gap-2 btn-hover-lift">
+              View Projects
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
             <button class="btn btn-outline-secondary px-4 py-2 rounded-3 fw-medium d-flex align-items-center gap-2 border-2 btn-hover-lift" @click="confirmDownload">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
