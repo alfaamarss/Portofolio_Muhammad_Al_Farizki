@@ -85,7 +85,7 @@
         <div class="col">
           <div class="card h-100 border-0 rounded-4 bg-white shadow-sm featured-card transition-all">
             <div class="featured-preview position-relative overflow-hidden rounded-top-4 d-flex align-items-center justify-content-center" style="aspect-ratio: 16/9">
-              <img src="@/assets/img/Profilex.png" alt="ProFileX Dashboard Interface" class="hero-image w-100 h-100 object-fit-cover transition-all" />
+              <img src="@/assets/img/profilex.png" alt="ProFileX Dashboard Interface" class="hero-image w-100 h-100 object-fit-cover transition-all" />
               <div class="position-absolute top-0 end-0 m-3 badge bg-dark bg-opacity-75 text-white border border-secondary border-opacity-50 rounded-pill px-3 py-2 fw-normal project-badge">
                 Academic Project
               </div>
