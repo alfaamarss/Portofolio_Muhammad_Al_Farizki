@@ -1,9 +1,10 @@
 <template>
   <Navbar />
   <About />
-  <Education />
   <Project />
   <Skill />
+  <Education />
+  <Contact />
   <Footer />
 </template>
 
@@ -15,4 +16,5 @@ import Education from "./components/Education.vue";
 import Navbar from "./components/Navbar.vue";
 import Project from "./components/Project.vue";
 import Footer from "./components/Footer.vue";
+import Contact from "./components/Contact.vue";
 </script>
