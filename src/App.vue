@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import Hero from "./components/Hero.vue";
+
 import Skill from "./components/Skill.vue";
 import About from "./components/About.vue";
 import Education from "./components/Education.vue";

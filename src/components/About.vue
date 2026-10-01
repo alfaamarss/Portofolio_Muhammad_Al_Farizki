@@ -1,26 +1,56 @@
 <template>
-  <div class="portfolio-container d-flex align-items-center position-relative overflow-hidden">
-    <!-- Dekorasi Background Sabtle -->
+  <div
+    class="portfolio-container d-flex align-items-center position-relative overflow-hidden"
+  >
+    <!-- Dekorasi Background Subtle -->
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
 
-    <section class="container pt-5 mt-5 position-relative z-1" id="about">
+    <section
+      class="container pt-5 mt-5 position-relative z-1"
+      id="about"
+      aria-labelledby="hero-title"
+    >
       <div class="row align-items-center g-5">
         <!-- Kolom Profil (Kiri) -->
-        <div class="col-lg-4 d-flex flex-column align-items-center text-center animate-fade-up">
+        <div
+          class="col-lg-4 d-flex flex-column align-items-center text-center animate-fade-up"
+        >
           <div class="profile-img-wrapper mb-4 shadow-sm">
-            <img src="@/assets/img/Profile.png" alt="Muhammad Al Farizki" class="img-fluid rounded-circle profile-img"
-              draggable="false" />
+            <img
+              src="@/assets/img/Profile.png"
+              alt="Muhammad Al Farizki - Fullstack Web Developer"
+              class="img-fluid rounded-circle profile-img"
+              draggable="false"
+            />
           </div>
-          <h5 class="fw-bold mb-1 text-dark">Muhammad Al Farizki</h5>
-          <small class="text-muted mb-3 d-block fw-medium">Full-Stack Web Developer</small>
+
+          <h2 class="fw-bold mb-1 text-dark">
+            Muhammad Al Farizki
+          </h2>
+
+          <p class="text-muted mb-3 fw-medium">
+            Fullstack Web Developer
+          </p>
 
           <span
-            class="badge bg-success-subtle text-success px-3 py-2 rounded-pill border border-success-subtle fw-medium d-inline-flex align-items-center gap-2 shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            class="badge bg-success-subtle text-success px-3 py-2 rounded-pill border border-success-subtle fw-medium d-inline-flex align-items-center gap-2 shadow-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
+
             BNSP Certified
           </span>
         </div>
@@ -28,76 +58,180 @@
         <!-- Kolom Konten Utama (Kanan) -->
         <div class="col-lg-8 px-md-4">
           <div
-            class="opp-badge d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4 border shadow-sm animate-fade-up delay-1">
-            <span class="status-dot"></span>
+            class="opp-badge d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mb-4 border shadow-sm animate-fade-up delay-1"
+          >
+            <span class="status-dot" aria-hidden="true"></span>
             Open to opportunities
           </div>
 
-          <h1 class="fw-bolder mb-4 hero-title animate-fade-up delay-2">
-            Designing logic. <br class="d-none d-lg-block" />
-            Building interfaces. <br class="d-none d-lg-block" />
-            <span class="text-gradient">Delivering performance.</span>
+          <h1
+            id="hero-title"
+            class="fw-bolder mb-4 hero-title animate-fade-up delay-2"
+          >
+            Muhammad Al Farizki
+            <br />
+            <span class="text-gradient">Fullstack Web Developer</span>
           </h1>
 
-          <p class="fs-6 text-secondary mb-4 hero-desc lh-lg pe-lg-5 animate-fade-up delay-3">
-            I'm <strong class="text-dark">Muhammad Al Farizki</strong>, an Informatics student and BNSP-certified
-            full-stack developer. I bridge robust backend logic with dynamic user interfaces to build secure,
-            production-grade
-            applications that perform at scale.
+          <p class="hero-tagline text-secondary mb-3">
+            Designing logic. Building interfaces. Delivering performance.
           </p>
-          <div class="mt-4 d-flex gap-3 flex-wrap mb-5 animate-fade-up delay-4">
-            <a href="#projects"
-              class="btn btn-primary px-4 py-2 rounded-3 fw-medium shadow-sm d-flex align-items-center gap-2 btn-hover-lift text-decoration-none w-auto d-inline-flex">
+
+          <p
+            class="fs-6 text-secondary mb-4 hero-desc lh-lg pe-lg-5 animate-fade-up delay-3"
+          >
+            I'm
+            <strong class="text-dark">Muhammad Al Farizki</strong>,
+            an Informatics student and BNSP-certified full-stack developer.
+            I bridge robust backend logic with dynamic user interfaces to
+            build secure, production-grade applications that perform at scale.
+          </p>
+
+          <div
+            class="mt-4 d-flex gap-3 flex-wrap mb-5 animate-fade-up delay-4"
+          >
+            <a
+              href="#projects"
+              class="btn btn-primary px-4 py-2 rounded-3 fw-medium shadow-sm d-flex align-items-center gap-2 btn-hover-lift text-decoration-none w-auto d-inline-flex"
+            >
               View Projects
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
+
             <button
+              type="button"
               class="btn btn-outline-secondary px-4 py-2 rounded-3 fw-medium d-flex align-items-center gap-2 border-2 btn-hover-lift"
-              @click="confirmDownload">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              @click="confirmDownload"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                ></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
+
               Download CV
             </button>
           </div>
 
           <!-- Social Links -->
-          <div class="d-flex flex-wrap align-items-center gap-4 social-footer mt-2 animate-fade-up delay-5">
+          <div
+            class="d-flex flex-wrap align-items-center gap-4 social-footer mt-2 animate-fade-up delay-5"
+          >
             <div class="d-flex gap-3">
-              <a href="https://github.com/alfaamarss" target="_blank" class="social-icon" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <a
+                href="https://github.com/alfaamarss"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                aria-label="GitHub Muhammad Al Farizki"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
                   <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                  </path>
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/muhammad-al-farizki/" target="_blank" class="social-icon"
-                aria-label="LinkedIn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+
+              <a
+                href="https://www.linkedin.com/in/muhammad-al-farizki/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+                aria-label="LinkedIn Muhammad Al Farizki"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
-              <a href="mailto:muhammadalfa10@gmail.com" class="social-icon" aria-label="Email">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+
+              <a
+                href="mailto:muhammadalfa10@gmail.com"
+                class="social-icon"
+                aria-label="Email Muhammad Al Farizki"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
               </a>
             </div>
-            <div class="vr bg-secondary opacity-25 d-none d-md-block" style="width: 2px; height: 24px"></div>
-            <span class="text-muted fs-7 d-none d-md-block">Available for freelance</span>
+
+            <div
+              class="vr bg-secondary opacity-25 d-none d-md-block"
+              style="width: 2px; height: 24px"
+              aria-hidden="true"
+            ></div>
+
+            <span class="text-muted fs-7 d-none d-md-block">
+              Available for freelance
+            </span>
           </div>
         </div>
       </div>
@@ -146,6 +280,7 @@ function confirmDownload() {
 
 <style scoped>
 /* Typografi & Background */
+
 .portfolio-container {
   font-family:
     "Inter",
@@ -157,6 +292,7 @@ function confirmDownload() {
 }
 
 /* Dekorasi Latar Belakang (Subtle Blobs) */
+
 .bg-shape {
   position: absolute;
   filter: blur(80px);
@@ -182,6 +318,7 @@ function confirmDownload() {
 }
 
 /* Kustomisasi Profil Image */
+
 .profile-img-wrapper {
   padding: 8px;
   border: 2px solid transparent;
@@ -207,6 +344,7 @@ function confirmDownload() {
 }
 
 /* Badge Opportunities */
+
 .opp-badge {
   background-color: #eff6ff;
   border-color: #bfdbfe !important;
@@ -241,6 +379,7 @@ function confirmDownload() {
 }
 
 /* Judul Utama & Teks Gradien */
+
 .hero-title {
   font-size: 3.75rem;
   color: #111827;
@@ -255,6 +394,15 @@ function confirmDownload() {
   background-clip: text;
 }
 
+/* Tagline */
+
+.hero-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Badge */
+
 .bg-success-subtle {
   background-color: #ecfdf5 !important;
 }
@@ -264,6 +412,7 @@ function confirmDownload() {
 }
 
 /* Tombol */
+
 .btn-primary {
   background-color: #3b82f6;
   border-color: #3b82f6;
@@ -298,6 +447,7 @@ function confirmDownload() {
 }
 
 /* Ikon Sosial */
+
 .social-icon {
   color: #6b7280;
   padding: 8px;
@@ -320,6 +470,7 @@ function confirmDownload() {
 }
 
 /* Animasi Muncul (Fade-up) */
+
 .animate-fade-up {
   opacity: 0;
   transform: translateY(20px);
@@ -354,6 +505,7 @@ function confirmDownload() {
 }
 
 /* Responsif Mobile */
+
 @media (max-width: 991px) {
   .hero-title {
     font-size: 2.75rem;
