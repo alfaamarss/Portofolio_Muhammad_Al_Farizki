@@ -1,220 +1,374 @@
 <template>
-  <section class="py-5 bg-light" id="experience">
-    <div class="container">
-
-      <div class="section-header mb-5">
-        <span class="section-label">EXPERIENCE</span>
-        <h2 class="fw-bold">Where I've Worked</h2>
-        <p>
-          Hands-on experience building production applications
-          in collaborative team environments.
+  <section class="experience-section py-5" id="experience">
+    <div class="container py-lg-4">
+      <div class="mb-5">
+        <span class="section-eyebrow">
+          <i class="bi bi-briefcase"></i>
+          Career &amp; Capabilities
+        </span>
+        <h2 class="section-heading mb-2">Experience &amp; Tech Stack</h2>
+        <p class="section-lead mb-0">
+          Hands-on industry experience shipping production web applications alongside the modern tools I use every day.
         </p>
       </div>
 
-      <div class="timeline">
+      <div class="row g-4 g-lg-5 align-items-start">
+        <!-- Left Column: Work Experience Timeline -->
+        <div class="col-lg-7">
+          <div class="column-label mb-3">
+            <i class="bi bi-building-check text-primary"></i>
+            <span>WORK EXPERIENCE</span>
+          </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
+          <div class="timeline-wrapper">
+            <article class="exp-card">
+              <div class="exp-timeline-node" aria-hidden="true"></div>
 
-          <div class="experience-card">
+              <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="company-avatar">CAI</div>
+                  <div>
+                    <h3 class="exp-role mb-1">Full Stack Web Developer Intern</h3>
+                    <div class="exp-company">
+                      <span>PT Citi Asia Internasional</span>
+                      <span class="mx-1">•</span>
+                      <span>Tangerang, Banten</span>
+                    </div>
+                  </div>
+                </div>
 
-            <div class="experience-header">
-              <div>
-                <h5>Full Stack Web Developer Intern</h5>
-                <small>
-                  PT Citi Asia Internasional • Tangerang, Banten
-                </small>
+                <div class="d-flex flex-column align-items-start align-items-sm-end gap-1">
+                  <span class="role-pill">Magang Berdampak</span>
+                  <span class="exp-date">
+                    <i class="bi bi-calendar3 me-1"></i>Aug 2025 – Dec 2025
+                  </span>
+                </div>
               </div>
 
-              <div class="text-end">
-                <span class="badge-role">Internship</span>
-                <small class="d-block mt-1">
-                  Aug 2025 – Dec 2025
-                </small>
+              <p class="exp-summary mb-3">
+                Developed Smart Cities &amp; Smart Enterprises solutions through the national Magang Berdampak 2025 program, contributing across backend architecture and frontend interfaces for enterprise-scale platforms.
+              </p>
+
+              <ul class="exp-bullets list-unstyled mb-4">
+                <li>
+                  <i class="bi bi-arrow-right-short text-primary"></i>
+                  <span>Architected backend services, authentication flows, and RESTful APIs using Laravel and PHP.</span>
+                </li>
+                <li>
+                  <i class="bi bi-arrow-right-short text-primary"></i>
+                  <span>Built responsive, component-driven frontend interfaces with Vue.js and Bootstrap 5.</span>
+                </li>
+                <li>
+                  <i class="bi bi-arrow-right-short text-primary"></i>
+                  <span>Designed relational schemas and integrated modules with MySQL databases.</span>
+                </li>
+                <li>
+                  <i class="bi bi-arrow-right-short text-primary"></i>
+                  <span>Executed debugging, API testing, deployment pipelines, and query performance optimization.</span>
+                </li>
+                <li>
+                  <i class="bi bi-arrow-right-short text-primary"></i>
+                  <span>Authored OpenAPI / Swagger technical documentation and collaborated in agile Git sprints.</span>
+                </li>
+              </ul>
+
+              <div class="d-flex flex-wrap gap-2 pt-3 border-top border-light-subtle">
+                <span v-for="tech in expTags" :key="tech" class="stack-tag">{{ tech }}</span>
               </div>
-            </div>
-
-            <p class="experience-desc">
-              Developed Smart Cities & Smart Enterprises solutions through the
-              Magang Berdampak 2025 program, contributing to both frontend and
-              backend development for enterprise-scale applications.
-            </p>
-
-            <ul class="experience-list">
-              <li>
-                Built backend services, authentication systems, and REST APIs
-                using Laravel and PHP.
-              </li>
-
-              <li>
-                Developed responsive frontend interfaces using Vue.js and
-                Bootstrap.
-              </li>
-
-              <li>
-                Integrated frontend and backend modules with MySQL database.
-              </li>
-
-              <li>
-                Performed debugging, testing, deployment, and performance
-                optimization.
-              </li>
-
-              <li>
-                Produced technical documentation and collaborated with team
-                members throughout development cycles.
-              </li>
-            </ul>
-
-            <div class="skill-tags">
-              <span>Laravel</span>
-              <span>Vue.js</span>
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>REST API</span>
-              <span>Bootstrap</span>
-              <span>Git</span>
-            </div>
-
+            </article>
           </div>
         </div>
 
+        <!-- Right Column: Categorized Tech Stack Bento -->
+        <div class="col-lg-5">
+          <div class="column-label mb-3">
+            <i class="bi bi-cpu text-primary"></i>
+            <span>TECHNICAL ARSENAL</span>
+          </div>
+
+          <div class="d-flex flex-column gap-3">
+            <div v-for="group in skillGroups" :key="group.title" class="stack-group-card">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="stack-group-icon" :class="group.colorClass">
+                  <i class="bi" :class="group.icon"></i>
+                </span>
+                <div>
+                  <h4 class="stack-group-title mb-0">{{ group.title }}</h4>
+                  <small class="text-muted">{{ group.subtitle }}</small>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-2">
+                <span v-for="skill in group.items" :key="skill" class="skill-pill">
+                  <span class="skill-dot" :class="group.dotClass"></span>
+                  {{ skill }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
+<script setup>
+const expTags = ["Laravel", "Vue.js", "PHP", "MySQL", "REST API", "Swagger", "Bootstrap", "Git"];
+
+const skillGroups = [
+  {
+    title: "Backend & Architecture",
+    subtitle: "Server-side logic & API design",
+    icon: "bi-hdd-network",
+    colorClass: "icon-blue",
+    dotClass: "dot-blue",
+    items: ["Laravel", "PHP", "RESTful API", "OpenAPI / Swagger", "N-Tier Architecture", "Authentication / JWT"],
+  },
+  {
+    title: "Frontend & Interactive UI",
+    subtitle: "Responsive interfaces & spatial web",
+    icon: "bi-window-fullscreen",
+    colorClass: "icon-violet",
+    dotClass: "dot-violet",
+    items: ["Vue.js 3", "JavaScript (ES6+)", "Bootstrap 5", "HTML5 & CSS3", "Leaflet.js (GIS)", "TailAdmin"],
+  },
+  {
+    title: "Database & Workflow",
+    subtitle: "Data persistence & team tooling",
+    icon: "bi-database-check",
+    colorClass: "icon-emerald",
+    dotClass: "dot-emerald",
+    items: ["MySQL", "Database Modeling", "Docker", "Git & GitHub", "Postman", "Vite"],
+  },
+];
+</script>
+
 <style scoped>
-.section-header {
-  max-width: 500px;
+.experience-section {
+  background-color: #ffffff;
 }
 
-.section-label {
-  font-size: 11px;
+.column-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: linear-gradient(180deg, #2563eb 0%, #bfdbfe 65%, transparent 100%);
+}
+
+.exp-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 28px -14px rgba(15, 23, 42, 0.07);
+  transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 20px 40px -16px rgba(37, 99, 235, 0.12);
+}
+
+.exp-timeline-node {
+  position: absolute;
+  left: -1.75rem;
+  top: 2rem;
+  transform: translateX(1px);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 3px solid #dbeafe;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+.company-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exp-role {
+  font-size: 1.15rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  color: #4f7cff;
+  color: #0f172a;
 }
 
-.section-header h2 {
-  margin-top: 8px;
-  margin-bottom: 10px;
-  font-size: 2.2rem;
+.exp-company {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
 }
 
-.section-header p {
-  color: #6b7280;
+.role-pill {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.exp-date {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.exp-summary {
+  color: #475569;
+  font-size: 0.94rem;
   line-height: 1.7;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 35px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #e5e7eb;
-}
-
-.timeline-item {
-  position: relative;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -29px;
-  top: 18px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #4f7cff;
-}
-
-.experience-card {
-  background: white;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  padding: 24px;
-  transition: all .3s ease;
-}
-
-.experience-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.experience-header {
+.exp-bullets li {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 15px;
+  gap: 0.35rem;
+  margin-bottom: 0.55rem;
+  color: #334155;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
-.experience-header h5 {
+.exp-bullets i {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  flex-shrink: 0;
+}
+
+.stack-tag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  padding: 0.28rem 0.65rem;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+/* Right Column Stack Bento */
+.stack-group-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.35rem;
+  transition: all 0.25s ease;
+}
+
+.stack-group-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px -12px rgba(15, 23, 42, 0.08);
+}
+
+.stack-group-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.icon-blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.icon-violet {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.icon-emerald {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.stack-group-title {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  color: #0f172a;
 }
 
-.experience-header small {
-  color: #6b7280;
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #1e293b;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02);
+  transition: all 0.2s ease;
 }
 
-.badge-role {
-  background: #e8f1ff;
-  color: #4f7cff;
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 12px;
-  font-weight: 600;
+.skill-pill:hover {
+  border-color: #94a3b8;
+  transform: translateY(-1px);
 }
 
-.experience-desc {
-  color: #6b7280;
-  margin-bottom: 15px;
+.skill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
 }
 
-.experience-list {
-  margin-bottom: 18px;
-}
+.dot-blue { background: #2563eb; }
+.dot-violet { background: #7c3aed; }
+.dot-emerald { background: #10b981; }
 
-.experience-list li {
-  margin-bottom: 8px;
-  color: #374151;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skill-tags span {
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-}
-
-@media (max-width: 768px) {
-  .experience-header {
-    flex-direction: column;
+@media (max-width: 575.98px) {
+  .timeline-wrapper {
+    padding-left: 0;
   }
 
-  .text-end {
-    text-align: left !important;
+  .timeline-wrapper::before,
+  .exp-timeline-node {
+    display: none;
   }
 
-  .section-header h2 {
-    font-size: 1.8rem;
+  .exp-card {
+    padding: 1.35rem;
   }
 }
 </style>

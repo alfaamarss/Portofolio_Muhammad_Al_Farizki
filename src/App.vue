@@ -1,15 +1,18 @@
 <template>
-  <Navbar />
-  <About />
-  <Project />
-  <Skill />
-  <Education />
-  <Contact />
-  <Footer />
+  <div id="home" class="app-shell">
+    <Navbar />
+    <main>
+      <About />
+      <Project />
+      <Skill />
+      <Education />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <script setup>
-
 import Skill from "./components/Skill.vue";
 import About from "./components/About.vue";
 import Education from "./components/Education.vue";
